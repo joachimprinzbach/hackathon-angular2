@@ -2,6 +2,9 @@ import {Component} from 'angular2/core';
 
 @Component({
     selector: 'camp-app',
-    template: '<h1>Camp Organization made easy</h1>'
+    templateUrl: './app/app.html'
 })
-export class AppComponent { }
+export class AppComponent {
+    framework: string = "Angular 2"
+
+};
