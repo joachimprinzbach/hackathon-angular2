@@ -10,3 +10,6 @@ $ npm install
 ```sh
 $ npm start
 ```
+
+###Cheat Sheet
+https://angular.io/cheatsheet
