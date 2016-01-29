@@ -1,11 +1,24 @@
 <div class="container">
     <h1>Camp planning made easy</h1>
     <div>
-        <label>Framework: </label>
-        <input type="text" class="text-input" [(ngModel)]="framework">
-    </div>
+        <h1>Hotels</h1>
+        <input type="text" class="text-input" [(ngModel)]="locationFilter">
 
-    <div>
-        <p>{{framework}}</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        HotelName
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="#location of locations | locationFilter:locationFilter" (click)="locationDetail(location)">
+                    <td>{{location.hotelName}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <location-detail [location]="selectedLocation"></location-detail>
     </div>
 </div>
