@@ -1,13 +1,11 @@
-import {Component} from 'angular2/core';
 import {Location} from './location';
+import {Component, Input} from "@angular/core";
 
 @Component({
     selector: 'location-detail',
-    templateUrl: './app/locationDetail.html',
-    inputs: ['location']
+    templateUrl: './app/locationDetail.html'
 })
-
 export class LocationDetailComponent {
-    public location:Location;
+
 
 }

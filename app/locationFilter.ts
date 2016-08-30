@@ -1,5 +1,5 @@
-import {Pipe, PipeTransform, Injectable} from 'angular2/core';
 import {Location} from './location';
+import {Pipe, Injectable, PipeTransform} from "@angular/core";
 
 @Pipe({
     name: 'locationFilter'
@@ -7,6 +7,6 @@ import {Location} from './location';
 @Injectable()
 export class LocationFilter implements PipeTransform {
     transform(locations: Array<Location>, searchString: Array<any>) : any {
-        return locations.filter(location => location.hotelName.toLowerCase().includes(searchString[0].toLowerCase()));
+        return locations;//.filter(location => location.hotelName.toLowerCase().includes(searchString[0].toLowerCase()));
     }
 }

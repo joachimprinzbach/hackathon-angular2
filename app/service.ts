@@ -1,8 +1,8 @@
-import {Injectable} from 'angular2/core';
-import {Http} from 'angular2/http';
-import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import {Location} from './location';
+import {Http} from "@angular/http";
+import {Injectable} from "@angular/core";
+import {Observable} from "rxjs/Rx";
 
 @Injectable()
 export class LocationService {
@@ -10,7 +10,7 @@ export class LocationService {
     }
 
     getLocations() : Observable<Array<Location>> {
-        return this.http.get("http://localhost:1337/locations")
+        return this.http.get("http://beta.json-generator.com/api/json/get/EJbRY1aIx")
             .map(res => <Array<Location>> res.json());
     }
 }
